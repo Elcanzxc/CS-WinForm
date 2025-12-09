@@ -47,9 +47,10 @@
             btnNewGame.FlatAppearance.MouseOverBackColor = Color.Lime;
             btnNewGame.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnNewGame.ForeColor = Color.White;
-            btnNewGame.Location = new Point(26, 454);
+            btnNewGame.Location = new Point(23, 340);
+            btnNewGame.Margin = new Padding(3, 2, 3, 2);
             btnNewGame.Name = "btnNewGame";
-            btnNewGame.Size = new Size(152, 54);
+            btnNewGame.Size = new Size(133, 40);
             btnNewGame.TabIndex = 0;
             btnNewGame.Text = "Yeni Oyun";
             btnNewGame.UseVisualStyleBackColor = false;
@@ -59,21 +60,23 @@
             // 
             panel1.BackColor = Color.Silver;
             panel1.Controls.Add(grenade);
-            panel1.Location = new Point(26, 27);
+            panel1.Location = new Point(23, 20);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(606, 405);
+            panel1.Size = new Size(530, 304);
             panel1.TabIndex = 1;
             // 
             // grenade
             // 
             grenade.Image = (Image)resources.GetObject("grenade.Image");
-            grenade.Location = new Point(181, 144);
+            grenade.Location = new Point(158, 108);
+            grenade.Margin = new Padding(3, 2, 3, 2);
             grenade.Name = "grenade";
-            grenade.Size = new Size(60, 60);
+            grenade.Size = new Size(52, 45);
             grenade.SizeMode = PictureBoxSizeMode.StretchImage;
             grenade.TabIndex = 0;
             grenade.TabStop = false;
-           
+            grenade.Click += grenade_Click;
             // 
             // btnCreatePanel
             // 
@@ -81,9 +84,10 @@
             btnCreatePanel.FlatAppearance.MouseOverBackColor = Color.Cyan;
             btnCreatePanel.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCreatePanel.ForeColor = Color.White;
-            btnCreatePanel.Location = new Point(184, 454);
+            btnCreatePanel.Location = new Point(161, 340);
+            btnCreatePanel.Margin = new Padding(3, 2, 3, 2);
             btnCreatePanel.Name = "btnCreatePanel";
-            btnCreatePanel.Size = new Size(152, 54);
+            btnCreatePanel.Size = new Size(133, 40);
             btnCreatePanel.TabIndex = 2;
             btnCreatePanel.Text = "Panel Yarat";
             btnCreatePanel.UseVisualStyleBackColor = false;
@@ -94,34 +98,36 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 162);
             label1.ForeColor = Color.White;
-            label1.Location = new Point(389, 467);
+            label1.Location = new Point(340, 350);
             label1.Name = "label1";
-            label1.Size = new Size(120, 28);
+            label1.Size = new Size(97, 21);
             label1.TabIndex = 3;
             label1.Text = "Panel Sayı :";
             // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 162);
-            textBox1.Location = new Point(515, 467);
+            textBox1.Location = new Point(451, 350);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(117, 34);
+            textBox1.Size = new Size(103, 29);
             textBox1.TabIndex = 4;
             textBox1.Text = "0";
             textBox1.TextAlign = HorizontalAlignment.Right;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Black;
-            ClientSize = new Size(656, 527);
+            ClientSize = new Size(574, 395);
             Controls.Add(textBox1);
             Controls.Add(label1);
             Controls.Add(btnCreatePanel);
             Controls.Add(btnNewGame);
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Grenade";

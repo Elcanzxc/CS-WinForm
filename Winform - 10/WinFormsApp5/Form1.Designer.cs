@@ -41,6 +41,8 @@
             btnGas = new Button();
             btnBreak = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
+            timer2 = new System.Windows.Forms.Timer(components);
+            timer3 = new System.Windows.Forms.Timer(components);
             ((System.ComponentModel.ISupportInitialize)car).BeginInit();
             groupBox1.SuspendLayout();
             SuspendLayout();
@@ -185,5 +187,7 @@
         private Button btnLeft;
         private Button btnBack;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
+        private System.Windows.Forms.Timer timer3;
     }
 }

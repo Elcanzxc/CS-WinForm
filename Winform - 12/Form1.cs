@@ -120,10 +120,7 @@ namespace Bomb_Rain
         private void Form1_KeyUp(object sender, KeyEventArgs e)
         {
             man.Location = new Point(left.Location.X, left.Location.Y - 15);
-            if (right.Left == 550)
-            {
-                man.Left = 596;
-            }
+
             man.Visible = true;
             if (left.Visible)
             {

@@ -83,5 +83,10 @@ namespace ArkanoidGame
         {
 
         }
+
+        private void top_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

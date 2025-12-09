@@ -43,13 +43,13 @@ namespace AvoidGrenade
                 return;
             }
 
-            
+
 
         }
 
         private void btnNewGame_Click(object sender, EventArgs e)
         {
-            for(int i = panel1.Controls.Count - 1; i >= 0; i--)
+            for (int i = panel1.Controls.Count - 1; i >= 0; i--)
             {
                 if (panel1.Controls[i].Name != "grenade")
                 {
@@ -64,6 +64,11 @@ namespace AvoidGrenade
             grenadeX = random.Next(0, 546);
             grenadeY = random.Next(0, 345);
             grenade.Location = new Point(grenadeX, grenadeY);
+
+        }
+
+        private void grenade_Click(object sender, EventArgs e)
+        {
 
         }
     }

@@ -47,6 +47,7 @@
             top.SizeMode = PictureBoxSizeMode.StretchImage;
             top.TabIndex = 0;
             top.TabStop = false;
+            top.Click += top_Click;
             // 
             // panel1
             // 
