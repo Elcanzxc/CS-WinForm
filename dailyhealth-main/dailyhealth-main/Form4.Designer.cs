@@ -39,7 +39,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(200, 30);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "План тренировок";
+            this.lblTitle.Text = "Workout Plan";
 
             // grpOptions
             this.grpOptions.Controls.Add(this.btnGenerate);
@@ -53,13 +53,13 @@
             this.grpOptions.Size = new System.Drawing.Size(780, 100);
             this.grpOptions.TabIndex = 1;
             this.grpOptions.TabStop = false;
-            this.grpOptions.Text = "Параметры";
+            this.grpOptions.Text = "Options";
 
             // cmbLevel
             this.cmbLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbLevel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbLevel.FormattingEnabled = true;
-            this.cmbLevel.Items.AddRange(new object[] { "Новичок", "Средний" });
+            this.cmbLevel.Items.AddRange(new object[] { "Beginner", "Intermediate" });
             this.cmbLevel.Location = new System.Drawing.Point(120, 30);
             this.cmbLevel.Name = "cmbLevel";
             this.cmbLevel.Size = new System.Drawing.Size(200, 23);
@@ -70,9 +70,9 @@
             this.cmbGoal.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.cmbGoal.FormattingEnabled = true;
             this.cmbGoal.Items.AddRange(new object[] {
-                "Похудение",
-                "Набор массы",
-                "Поддержание формы"
+                "Weight Loss",
+                "Muscle Gain",
+                "Maintenance"
             });
             this.cmbGoal.Location = new System.Drawing.Point(450, 30);
             this.cmbGoal.Name = "cmbGoal";
@@ -84,9 +84,9 @@
             this.lblLevel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblLevel.Location = new System.Drawing.Point(20, 33);
             this.lblLevel.Name = "lblLevel";
-            this.lblLevel.Size = new System.Drawing.Size(55, 15);
+            this.lblLevel.Size = new System.Drawing.Size(45, 15);
             this.lblLevel.TabIndex = 2;
-            this.lblLevel.Text = "Уровень:";
+            this.lblLevel.Text = "Level:";
 
             // lblGoal
             this.lblGoal.AutoSize = true;
@@ -95,7 +95,7 @@
             this.lblGoal.Name = "lblGoal";
             this.lblGoal.Size = new System.Drawing.Size(35, 15);
             this.lblGoal.TabIndex = 3;
-            this.lblGoal.Text = "Цель:";
+            this.lblGoal.Text = "Goal:";
 
             // btnGenerate
             this.btnGenerate.BackColor = System.Drawing.Color.LightGreen;
@@ -104,7 +104,7 @@
             this.btnGenerate.Name = "btnGenerate";
             this.btnGenerate.Size = new System.Drawing.Size(180, 30);
             this.btnGenerate.TabIndex = 4;
-            this.btnGenerate.Text = "Создать план";
+            this.btnGenerate.Text = "Generate Plan";
             this.btnGenerate.UseVisualStyleBackColor = false;
             this.btnGenerate.Click += new System.EventHandler(this.btnGenerate_Click);
 
@@ -115,7 +115,7 @@
             this.lblPlan.Name = "lblPlan";
             this.lblPlan.Size = new System.Drawing.Size(130, 19);
             this.lblPlan.TabIndex = 2;
-            this.lblPlan.Text = "План тренировок:";
+            this.lblPlan.Text = "Workout Plan:";
 
             // txtWorkoutPlan
             this.txtWorkoutPlan.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -134,7 +134,7 @@
             this.lblTips.Name = "lblTips";
             this.lblTips.Size = new System.Drawing.Size(169, 19);
             this.lblTips.TabIndex = 4;
-            this.lblTips.Text = "Советы по упражнениям:";
+            this.lblTips.Text = "Exercise Tips:";
 
             // txtTips
             this.txtTips.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -153,7 +153,7 @@
             this.btnSavePlan.Name = "btnSavePlan";
             this.btnSavePlan.Size = new System.Drawing.Size(180, 40);
             this.btnSavePlan.TabIndex = 6;
-            this.btnSavePlan.Text = "Сохранить план";
+            this.btnSavePlan.Text = "Save Plan";
             this.btnSavePlan.UseVisualStyleBackColor = false;
             this.btnSavePlan.Click += new System.EventHandler(this.btnSavePlan_Click);
 
@@ -164,7 +164,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(180, 40);
             this.btnClose.TabIndex = 7;
-            this.btnClose.Text = "Закрыть";
+            this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
 
@@ -182,7 +182,7 @@
             this.Controls.Add(this.lblTitle);
             this.Name = "Form4";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "План тренировок";
+            this.Text = "Workout Plan";
             this.grpOptions.ResumeLayout(false);
             this.grpOptions.PerformLayout();
             this.ResumeLayout(false);

@@ -51,7 +51,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(250, 30);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Калькулятор калорий";
+            this.lblTitle.Text = "Calorie Calculator";
 
             // grpInput
             this.grpInput.Controls.Add(this.lblGoal);
@@ -72,7 +72,7 @@
             this.grpInput.Size = new System.Drawing.Size(350, 280);
             this.grpInput.TabIndex = 1;
             this.grpInput.TabStop = false;
-            this.grpInput.Text = "Ваши данные";
+            this.grpInput.Text = "Your Data";
 
             // Input fields
             this.txtAge.Location = new System.Drawing.Point(150, 30);
@@ -83,26 +83,26 @@
             this.txtHeight.Size = new System.Drawing.Size(180, 23);
 
             this.cmbGender.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbGender.Items.AddRange(new object[] { "Мужской", "Женский" });
+            this.cmbGender.Items.AddRange(new object[] { "Male", "Female" });
             this.cmbGender.Location = new System.Drawing.Point(150, 135);
             this.cmbGender.Size = new System.Drawing.Size(180, 23);
 
             this.cmbActivityLevel.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbActivityLevel.Items.AddRange(new object[] {
-                "Малоподвижный",
-                "Легкая активность",
-                "Умеренная активность",
-                "Высокая активность",
-                "Очень высокая"
+                "Sedentary",
+                "Lightly Active",
+                "Moderately Active",
+                "Very Active",
+                "Extremely Active"
             });
             this.cmbActivityLevel.Location = new System.Drawing.Point(150, 170);
             this.cmbActivityLevel.Size = new System.Drawing.Size(180, 23);
 
             this.cmbGoal.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbGoal.Items.AddRange(new object[] {
-                "Похудение",
-                "Поддержание веса",
-                "Набор массы"
+                "Weight Loss",
+                "Weight Maintenance",
+                "Muscle Gain"
             });
             this.cmbGoal.Location = new System.Drawing.Point(150, 205);
             this.cmbGoal.Size = new System.Drawing.Size(180, 23);
@@ -112,32 +112,32 @@
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblAge.Location = new System.Drawing.Point(20, 33);
-            this.lblAge.Text = "Возраст:";
+            this.lblAge.Text = "Age:";
 
             this.lblWeight.AutoSize = true;
             this.lblWeight.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblWeight.Location = new System.Drawing.Point(20, 68);
-            this.lblWeight.Text = "Вес (кг):";
+            this.lblWeight.Text = "Weight (kg):";
 
             this.lblHeight.AutoSize = true;
             this.lblHeight.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblHeight.Location = new System.Drawing.Point(20, 103);
-            this.lblHeight.Text = "Рост (см):";
+            this.lblHeight.Text = "Height (cm):";
 
             this.lblGender.AutoSize = true;
             this.lblGender.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblGender.Location = new System.Drawing.Point(20, 138);
-            this.lblGender.Text = "Пол:";
+            this.lblGender.Text = "Gender:";
 
             this.lblActivityLevel.AutoSize = true;
             this.lblActivityLevel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblActivityLevel.Location = new System.Drawing.Point(20, 173);
-            this.lblActivityLevel.Text = "Активность:";
+            this.lblActivityLevel.Text = "Activity Level:";
 
             this.lblGoal.AutoSize = true;
             this.lblGoal.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblGoal.Location = new System.Drawing.Point(20, 208);
-            this.lblGoal.Text = "Цель:";
+            this.lblGoal.Text = "Goal:";
 
             // grpResults
             this.grpResults.Controls.Add(this.lblRecommended);
@@ -149,29 +149,29 @@
             this.grpResults.Size = new System.Drawing.Size(380, 120);
             this.grpResults.TabIndex = 2;
             this.grpResults.TabStop = false;
-            this.grpResults.Text = "Результаты";
+            this.grpResults.Text = "Results";
 
             this.lblBMR.AutoSize = true;
             this.lblBMR.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblBMR.Location = new System.Drawing.Point(20, 30);
-            this.lblBMR.Text = "Базальный метаболизм (BMR): --";
+            this.lblBMR.Text = "Basal Metabolic Rate (BMR): --";
 
             this.lblTDEE.AutoSize = true;
             this.lblTDEE.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.lblTDEE.Location = new System.Drawing.Point(20, 55);
-            this.lblTDEE.Text = "Общий расход (TDEE): --";
+            this.lblTDEE.Text = "Total Daily Energy Expenditure (TDEE): --";
 
             this.lblRecommended.AutoSize = true;
             this.lblRecommended.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblRecommended.ForeColor = System.Drawing.Color.DarkGreen;
             this.lblRecommended.Location = new System.Drawing.Point(20, 85);
-            this.lblRecommended.Text = "Рекомендуемое потребление: --";
+            this.lblRecommended.Text = "Recommended Intake: --";
 
             // Macros
             this.lblMacros.AutoSize = true;
             this.lblMacros.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblMacros.Location = new System.Drawing.Point(390, 200);
-            this.lblMacros.Text = "Макронутриенты:";
+            this.lblMacros.Text = "Macronutrients:";
 
             this.txtMacros.Font = new System.Drawing.Font("Courier New", 9F);
             this.txtMacros.Location = new System.Drawing.Point(390, 230);
@@ -185,7 +185,7 @@
             this.lblRecommendations.AutoSize = true;
             this.lblRecommendations.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.lblRecommendations.Location = new System.Drawing.Point(20, 360);
-            this.lblRecommendations.Text = "Рекомендации:";
+            this.lblRecommendations.Text = "Recommendations:";
 
             this.txtRecommendations.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtRecommendations.Location = new System.Drawing.Point(20, 390);
@@ -200,7 +200,7 @@
             this.btnCalculate.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnCalculate.Location = new System.Drawing.Point(20, 590);
             this.btnCalculate.Size = new System.Drawing.Size(200, 45);
-            this.btnCalculate.Text = "Рассчитать";
+            this.btnCalculate.Text = "Calculate";
             this.btnCalculate.UseVisualStyleBackColor = false;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
 
@@ -208,7 +208,7 @@
             this.btnClose.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
             this.btnClose.Location = new System.Drawing.Point(570, 590);
             this.btnClose.Size = new System.Drawing.Size(200, 45);
-            this.btnClose.Text = "Закрыть";
+            this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
 
@@ -227,7 +227,7 @@
             this.Controls.Add(this.lblTitle);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Калькулятор калорий";
+            this.Text = "Calorie Calculator";
             this.grpInput.ResumeLayout(false);
             this.grpInput.PerformLayout();
             this.grpResults.ResumeLayout(false);

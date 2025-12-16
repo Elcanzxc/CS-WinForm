@@ -25,7 +25,7 @@ namespace dailyhealth
 
             if (Form1.AllRecords.Count == 0)
             {
-                MessageBox.Show("Нет сохраненных записей!", "Информация",
+                MessageBox.Show("No saved records found!", "Information",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return;
             }
@@ -43,7 +43,7 @@ namespace dailyhealth
                 item.SubItems.Add(record.ActivityLevel);
                 item.SubItems.Add(record.HealthScore.ToString());
 
-                // Цветовое кодирование по оценке здоровья
+                
                 if (record.HealthScore >= 80)
                     item.BackColor = Color.LightGreen;
                 else if (record.HealthScore >= 50)
@@ -62,61 +62,62 @@ namespace dailyhealth
 
             var records = Form1.AllRecords;
 
-            // Средние значения
+           
             double avgBMI = records.Average(r => r.BMI);
             double avgWeight = records.Average(r => r.Weight);
             double avgWater = records.Average(r => r.WaterGlasses);
             double avgSleep = records.Average(r => r.SleepHours);
             double avgScore = records.Average(r => r.HealthScore);
 
-            // Последние значения
+            
             var latest = records.Last();
             var oldest = records.First();
             double weightChange = latest.Weight - oldest.Weight;
 
-            // Отображение статистики
+            
             txtStats.Clear();
-            txtStats.AppendText("========== СТАТИСТИКА ==========\r\n\r\n");
-            txtStats.AppendText($"Всего записей: {records.Count}\r\n");
-            txtStats.AppendText($"Период: {oldest.Date:dd.MM.yyyy} - {latest.Date:dd.MM.yyyy}\r\n\r\n");
+            txtStats.AppendText("========== STATISTICS ==========\r\n\r\n");
+            txtStats.AppendText($"Total records: {records.Count}\r\n");
+            txtStats.AppendText($"Period: {oldest.Date:dd.MM.yyyy} - {latest.Date:dd.MM.yyyy}\r\n\r\n");
 
-            txtStats.AppendText("--- Средние показатели ---\r\n");
-            txtStats.AppendText($"ИМТ: {avgBMI:F2}\r\n");
-            txtStats.AppendText($"Вес: {avgWeight:F1} кг\r\n");
-            txtStats.AppendText($"Вода: {avgWater:F1} стаканов/день\r\n");
-            txtStats.AppendText($"Сон: {avgSleep:F1} часов/день\r\n");
-            txtStats.AppendText($"Оценка здоровья: {avgScore:F0}%\r\n\r\n");
+            txtStats.AppendText("--- Average Indicators ---\r\n");
+            txtStats.AppendText($"BMI: {avgBMI:F2}\r\n");
+            txtStats.AppendText($"Weight: {avgWeight:F1} kg\r\n");
+            txtStats.AppendText($"Water: {avgWater:F1} glasses/day\r\n");
+            txtStats.AppendText($"Sleep: {avgSleep:F1} hours/day\r\n");
+            txtStats.AppendText($"Health Score: {avgScore:F0}%\r\n\r\n");
 
-            txtStats.AppendText("--- Изменения ---\r\n");
-            txtStats.AppendText($"Изменение веса: {(weightChange >= 0 ? "+" : "")}{weightChange:F1} кг\r\n");
-            txtStats.AppendText($"Текущий вес: {latest.Weight:F1} кг\r\n");
-            txtStats.AppendText($"Начальный вес: {oldest.Weight:F1} кг\r\n\r\n");
+            txtStats.AppendText("--- Changes ---\r\n");
+            txtStats.AppendText($"Weight Change: {(weightChange >= 0 ? "+" : "")}{weightChange:F1} kg\r\n");
+            txtStats.AppendText($"Current Weight: {latest.Weight:F1} kg\r\n");
+            txtStats.AppendText($"Starting Weight: {oldest.Weight:F1} kg\r\n\r\n");
 
-            // Категории ИМТ
+          
             var bmiGroups = records.GroupBy(r => r.BMICategory);
-            txtStats.AppendText("--- Распределение по ИМТ ---\r\n");
+            txtStats.AppendText("--- BMI Distribution ---\r\n");
             foreach (var group in bmiGroups)
             {
                 double percentage = (group.Count() * 100.0) / records.Count;
-                txtStats.AppendText($"{group.Key}: {group.Count()} раз ({percentage:F0}%)\r\n");
+                txtStats.AppendText($"{group.Key}: {group.Count()} times ({percentage:F0}%)\r\n");
             }
 
-            txtStats.AppendText("\r\n--- Уровни активности ---\r\n");
+            
+            txtStats.AppendText("\r\n--- Activity Levels ---\r\n");
             var activityGroups = records.GroupBy(r => r.ActivityLevel);
             foreach (var group in activityGroups)
             {
                 double percentage = (group.Count() * 100.0) / records.Count;
-                txtStats.AppendText($"{group.Key}: {group.Count()} раз ({percentage:F0}%)\r\n");
+                txtStats.AppendText($"{group.Key}: {group.Count()} times ({percentage:F0}%)\r\n");
             }
 
-            // Лучший день
+          
             var bestDay = records.OrderByDescending(r => r.HealthScore).First();
-            txtStats.AppendText($"\r\n--- Лучший день ---\r\n");
-            txtStats.AppendText($"Дата: {bestDay.Date:dd.MM.yyyy}\r\n");
-            txtStats.AppendText($"Оценка: {bestDay.HealthScore}%\r\n");
-            txtStats.AppendText($"ИМТ: {bestDay.BMI:F2}\r\n");
-            txtStats.AppendText($"Вода: {bestDay.WaterGlasses} стаканов\r\n");
-            txtStats.AppendText($"Сон: {bestDay.SleepHours:F1} часов\r\n");
+            txtStats.AppendText($"\r\n--- Best Day ---\r\n");
+            txtStats.AppendText($"Date: {bestDay.Date:dd.MM.yyyy}\r\n");
+            txtStats.AppendText($"Score: {bestDay.HealthScore}%\r\n");
+            txtStats.AppendText($"BMI: {bestDay.BMI:F2}\r\n");
+            txtStats.AppendText($"Water: {bestDay.WaterGlasses} glasses\r\n");
+            txtStats.AppendText($"Sleep: {bestDay.SleepHours:F1} hours\r\n");
         }
 
         private void btnRefresh_Click(object sender, EventArgs e)
@@ -129,12 +130,12 @@ namespace dailyhealth
         {
             if (lvHistory.SelectedItems.Count == 0)
             {
-                MessageBox.Show("Выберите запись для удаления!", "Предупреждение",
+                MessageBox.Show("Please select a record to delete!", "Warning",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
-            if (MessageBox.Show("Удалить выбранную запись?", "Подтверждение",
+            if (MessageBox.Show("Delete the selected record?", "Confirmation",
                 MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 int index = lvHistory.SelectedIndices[0];
@@ -144,7 +145,7 @@ namespace dailyhealth
                 LoadHistory();
                 CalculateStatistics();
 
-                MessageBox.Show("Запись удалена!", "Успех",
+                MessageBox.Show("Record deleted!", "Success",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
@@ -153,13 +154,13 @@ namespace dailyhealth
         {
             if (Form1.AllRecords.Count == 0)
             {
-                MessageBox.Show("Нет данных для экспорта!", "Предупреждение",
+                MessageBox.Show("No data available for export!", "Warning",
                     MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
             SaveFileDialog saveDialog = new SaveFileDialog();
-            saveDialog.Filter = "CSV файлы (*.csv)|*.csv|Текстовые файлы (*.txt)|*.txt";
+            saveDialog.Filter = "CSV files (*.csv)|*.csv|Text files (*.txt)|*.txt";
             saveDialog.FileName = $"health_data_{DateTime.Now:yyyyMMdd}.csv";
 
             if (saveDialog.ShowDialog() == DialogResult.OK)
@@ -168,10 +169,9 @@ namespace dailyhealth
                 {
                     using (System.IO.StreamWriter file = new System.IO.StreamWriter(saveDialog.FileName))
                     {
-                        // Заголовок
-                        file.WriteLine("Дата,Время,Имя,Вес,ИМТ,Категория,Вода,Сон,Активность,Оценка");
+                     
+                        file.WriteLine("Date,Time,Name,Weight,BMI,Category,Water,Sleep,Activity,Score");
 
-                        // Данные
                         foreach (var record in Form1.AllRecords)
                         {
                             file.WriteLine($"{record.Date:dd.MM.yyyy},{record.Date:HH:mm}," +
@@ -181,12 +181,12 @@ namespace dailyhealth
                         }
                     }
 
-                    MessageBox.Show("Данные успешно экспортированы!", "Успех",
+                    MessageBox.Show("Data exported successfully!", "Success",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show($"Ошибка при экспорте: {ex.Message}", "Ошибка",
+                    MessageBox.Show($"Export error: {ex.Message}", "Error",
                         MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -205,26 +205,26 @@ namespace dailyhealth
                 int recordIndex = Form1.AllRecords.Count - 1 - index;
                 var record = Form1.AllRecords[recordIndex];
 
-                string details = $"=== ДЕТАЛИ ЗАПИСИ ===\r\n\r\n" +
-                               $"Дата и время: {record.Date:dd.MM.yyyy HH:mm}\r\n\r\n" +
-                               $"Личные данные:\r\n" +
-                               $"  Имя: {record.Name}\r\n" +
-                               $"  Возраст: {record.Age}\r\n" +
-                               $"  Пол: {record.Gender}\r\n" +
-                               $"  Рост: {record.Height} см\r\n" +
-                               $"  Вес: {record.Weight} кг\r\n\r\n" +
-                               $"Показатели здоровья:\r\n" +
-                               $"  ИМТ: {record.BMI:F2} ({record.BMICategory})\r\n" +
-                               $"  Вода: {record.WaterGlasses} стаканов\r\n" +
-                               $"  Сон: {record.SleepHours} часов\r\n" +
-                               $"  Активность: {record.ActivityLevel}\r\n\r\n" +
-                               $"Питание:\r\n" +
-                               $"  Завтрак: {(record.HadBreakfast ? "Да" : "Нет")}\r\n" +
-                               $"  Обед: {(record.HadLunch ? "Да" : "Нет")}\r\n" +
-                               $"  Ужин: {(record.HadDinner ? "Да" : "Нет")}\r\n\r\n" +
-                               $"Общая оценка: {record.HealthScore}%";
+                string details = $"=== RECORD DETAILS ===\r\n\r\n" +
+                               $"Date and Time: {record.Date:dd.MM.yyyy HH:mm}\r\n\r\n" +
+                               $"Personal Data:\r\n" +
+                               $"  Name: {record.Name}\r\n" +
+                               $"  Age: {record.Age}\r\n" +
+                               $"  Gender: {record.Gender}\r\n" +
+                               $"  Height: {record.Height} cm\r\n" +
+                               $"  Weight: {record.Weight} kg\r\n\r\n" +
+                               $"Health Indicators:\r\n" +
+                               $"  BMI: {record.BMI:F2} ({record.BMICategory})\r\n" +
+                               $"  Water: {record.WaterGlasses} glasses\r\n" +
+                               $"  Sleep: {record.SleepHours} hours\r\n" +
+                               $"  Activity: {record.ActivityLevel}\r\n\r\n" +
+                               $"Nutrition:\r\n" +
+                               $"  Breakfast: {(record.HadBreakfast ? "Yes" : "No")}\r\n" +
+                               $"  Lunch: {(record.HadLunch ? "Yes" : "No")}\r\n" +
+                               $"  Dinner: {(record.HadDinner ? "Yes" : "No")}\r\n\r\n" +
+                               $"Overall Score: {record.HealthScore}%";
 
-                MessageBox.Show(details, "Детали записи",
+                MessageBox.Show(details, "Record Details",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }

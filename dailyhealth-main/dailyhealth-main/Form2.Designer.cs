@@ -43,7 +43,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(250, 30);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "История и статистика";
+            this.lblTitle.Text = "History and Statistics";
 
             // lvHistory
             this.lvHistory.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
@@ -59,26 +59,26 @@
             this.lvHistory.View = System.Windows.Forms.View.Details;
             this.lvHistory.DoubleClick += new System.EventHandler(this.lvHistory_DoubleClick);
 
-            // Columns
-            this.colDate.Text = "Дата";
+            // Columns (Headers translated)
+            this.colDate.Text = "Date";
             this.colDate.Width = 90;
-            this.colTime.Text = "Время";
+            this.colTime.Text = "Time";
             this.colTime.Width = 60;
-            this.colName.Text = "Имя";
+            this.colName.Text = "Name";
             this.colName.Width = 100;
-            this.colWeight.Text = "Вес";
+            this.colWeight.Text = "Weight";
             this.colWeight.Width = 60;
-            this.colBMI.Text = "ИМТ";
+            this.colBMI.Text = "BMI";
             this.colBMI.Width = 60;
-            this.colCategory.Text = "Категория";
+            this.colCategory.Text = "Category";
             this.colCategory.Width = 120;
-            this.colWater.Text = "Вода";
+            this.colWater.Text = "Water";
             this.colWater.Width = 60;
-            this.colSleep.Text = "Сон";
+            this.colSleep.Text = "Sleep";
             this.colSleep.Width = 60;
-            this.colActivity.Text = "Активность";
+            this.colActivity.Text = "Activity";
             this.colActivity.Width = 100;
-            this.colScore.Text = "Балл";
+            this.colScore.Text = "Score";
             this.colScore.Width = 60;
 
             // lblStats
@@ -88,7 +88,7 @@
             this.lblStats.Name = "lblStats";
             this.lblStats.Size = new System.Drawing.Size(90, 19);
             this.lblStats.TabIndex = 2;
-            this.lblStats.Text = "Статистика:";
+            this.lblStats.Text = "Statistics Summary:";
 
             // txtStats
             this.txtStats.Font = new System.Drawing.Font("Courier New", 9F);
@@ -107,7 +107,7 @@
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.Size = new System.Drawing.Size(150, 40);
             this.btnRefresh.TabIndex = 4;
-            this.btnRefresh.Text = "Обновить";
+            this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
 
@@ -118,7 +118,7 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(150, 40);
             this.btnDelete.TabIndex = 5;
-            this.btnDelete.Text = "Удалить";
+            this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = false;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 
@@ -129,7 +129,7 @@
             this.btnExport.Name = "btnExport";
             this.btnExport.Size = new System.Drawing.Size(150, 40);
             this.btnExport.TabIndex = 6;
-            this.btnExport.Text = "Экспорт в CSV";
+            this.btnExport.Text = "Export to CSV";
             this.btnExport.UseVisualStyleBackColor = false;
             this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
 
@@ -140,7 +140,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(150, 40);
             this.btnClose.TabIndex = 7;
-            this.btnClose.Text = "Закрыть";
+            this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
 
@@ -158,7 +158,7 @@
             this.Controls.Add(this.lblTitle);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "История и статистика";
+            this.Text = "Health History and Statistics";
             this.ResumeLayout(false);
             this.PerformLayout();
         }

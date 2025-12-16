@@ -46,7 +46,7 @@
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(200, 30);
             this.lblTitle.TabIndex = 0;
-            this.lblTitle.Text = "Настройки и цели";
+            this.lblTitle.Text = "Settings and Goals";
 
             // grpGoals
             this.grpGoals.Controls.Add(this.btnCalculateIdealWeight);
@@ -68,7 +68,7 @@
             this.grpGoals.Size = new System.Drawing.Size(380, 240);
             this.grpGoals.TabIndex = 1;
             this.grpGoals.TabStop = false;
-            this.grpGoals.Text = "Установить цели";
+            this.grpGoals.Text = "Set Goals";
 
             // txtWaterGoal
             this.txtWaterGoal.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -114,7 +114,7 @@
             this.lblWaterGoal.Name = "lblWaterGoal";
             this.lblWaterGoal.Size = new System.Drawing.Size(120, 15);
             this.lblWaterGoal.TabIndex = 5;
-            this.lblWaterGoal.Text = "Вода (стаканов/день):";
+            this.lblWaterGoal.Text = "Water (glasses/day):";
 
             // lblSleepGoal
             this.lblSleepGoal.AutoSize = true;
@@ -123,7 +123,7 @@
             this.lblSleepGoal.Name = "lblSleepGoal";
             this.lblSleepGoal.Size = new System.Drawing.Size(87, 15);
             this.lblSleepGoal.TabIndex = 6;
-            this.lblSleepGoal.Text = "Сон (часов/день):";
+            this.lblSleepGoal.Text = "Sleep (hours/day):";
 
             // lblWeightGoal
             this.lblWeightGoal.AutoSize = true;
@@ -132,7 +132,7 @@
             this.lblWeightGoal.Name = "lblWeightGoal";
             this.lblWeightGoal.Size = new System.Drawing.Size(90, 15);
             this.lblWeightGoal.TabIndex = 7;
-            this.lblWeightGoal.Text = "Целевой вес (кг):";
+            this.lblWeightGoal.Text = "Target weight (kg):";
 
             // lblCaloriesGoal
             this.lblCaloriesGoal.AutoSize = true;
@@ -141,7 +141,7 @@
             this.lblCaloriesGoal.Name = "lblCaloriesGoal";
             this.lblCaloriesGoal.Size = new System.Drawing.Size(110, 15);
             this.lblCaloriesGoal.TabIndex = 8;
-            this.lblCaloriesGoal.Text = "Калории (ккал/день):";
+            this.lblCaloriesGoal.Text = "Calories (kcal/day):";
 
             // lblStepsGoal
             this.lblStepsGoal.AutoSize = true;
@@ -150,7 +150,7 @@
             this.lblStepsGoal.Name = "lblStepsGoal";
             this.lblStepsGoal.Size = new System.Drawing.Size(90, 15);
             this.lblStepsGoal.TabIndex = 9;
-            this.lblStepsGoal.Text = "Шаги (шагов/день):";
+            this.lblStepsGoal.Text = "Steps (steps/day):";
 
             // lblWaterHint
             this.lblWaterHint.AutoSize = true;
@@ -177,7 +177,7 @@
             this.btnCalculateIdealWeight.Name = "btnCalculateIdealWeight";
             this.btnCalculateIdealWeight.Size = new System.Drawing.Size(260, 25);
             this.btnCalculateIdealWeight.TabIndex = 12;
-            this.btnCalculateIdealWeight.Text = "📊 Рассчитать идеальный вес";
+            this.btnCalculateIdealWeight.Text = "📊 Calculate Ideal Weight";
             this.btnCalculateIdealWeight.UseVisualStyleBackColor = false;
             this.btnCalculateIdealWeight.Click += new System.EventHandler(this.btnCalculateIdealWeight_Click);
 
@@ -188,7 +188,7 @@
             this.lblCurrentGoalsLabel.Name = "lblCurrentGoalsLabel";
             this.lblCurrentGoalsLabel.Size = new System.Drawing.Size(115, 19);
             this.lblCurrentGoalsLabel.TabIndex = 2;
-            this.lblCurrentGoalsLabel.Text = "Текущие цели:";
+            this.lblCurrentGoalsLabel.Text = "Current Goals:";
 
             // txtCurrentGoals
             this.txtCurrentGoals.Font = new System.Drawing.Font("Courier New", 9F);
@@ -207,7 +207,7 @@
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(180, 45);
             this.btnSave.TabIndex = 4;
-            this.btnSave.Text = "Сохранить";
+            this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = false;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
 
@@ -218,7 +218,7 @@
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(180, 45);
             this.btnReset.TabIndex = 5;
-            this.btnReset.Text = "Сбросить";
+            this.btnReset.Text = "Reset";
             this.btnReset.UseVisualStyleBackColor = false;
             this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
 
@@ -229,7 +229,7 @@
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(180, 45);
             this.btnClose.TabIndex = 6;
-            this.btnClose.Text = "Закрыть";
+            this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
 
@@ -246,7 +246,7 @@
             this.Controls.Add(this.lblTitle);
             this.Name = "Form5";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Настройки и цели";
+            this.Text = "Settings and Goals";
             this.grpGoals.ResumeLayout(false);
             this.grpGoals.PerformLayout();
             this.ResumeLayout(false);
