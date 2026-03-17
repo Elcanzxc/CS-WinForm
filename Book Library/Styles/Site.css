@@ -1,0 +1,290 @@
+﻿
+*, *::before, *::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 15px;
+	background: #f0f4f8;
+	color: #333;
+	min-height: 100vh;
+}
+
+a {
+	color: #3b82f6;
+	text-decoration: none;
+}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+
+.auth-wrapper {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	padding: 24px;
+	background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+}
+
+.auth-card {
+	background: #fff;
+	border-radius: 12px;
+	box-shadow: 0 8px 32px rgba(0,0,0,.18);
+	padding: 40px 36px;
+	width: 100%;
+	max-width: 420px;
+}
+
+.auth-title {
+	font-size: 1.6rem;
+	font-weight: 700;
+	color: #1e3a5f;
+	text-align: center;
+	margin-bottom: 28px;
+}
+
+.auth-link {
+	margin-top: 18px;
+	text-align: center;
+	color: #666;
+	font-size: .9rem;
+}
+
+
+.form-group {
+	margin-bottom: 16px;
+}
+
+	.form-group label {
+		display: block;
+		font-weight: 600;
+		margin-bottom: 5px;
+		color: #444;
+		font-size: .9rem;
+	}
+
+.form-control {
+	width: 100%;
+	padding: 9px 12px;
+	border: 1.5px solid #d1d5db;
+	border-radius: 7px;
+	font-size: .95rem;
+	transition: border-color .2s;
+	outline: none;
+}
+
+	.form-control:focus {
+		border-color: #3b82f6;
+	}
+
+.btn {
+	display: inline-block;
+	padding: 9px 20px;
+	border: none;
+	border-radius: 7px;
+	font-size: .95rem;
+	font-weight: 600;
+	cursor: pointer;
+	transition: background .2s, opacity .2s;
+	text-align: center;
+}
+
+.btn-primary {
+	background: #2563eb;
+	color: #fff;
+	width: 100%;
+	margin-top: 6px;
+}
+
+	.btn-primary:hover {
+		background: #1d4ed8;
+	}
+
+.btn-secondary {
+	background: #6b7280;
+	color: #fff;
+	margin-left: 8px;
+}
+
+	.btn-secondary:hover {
+		background: #4b5563;
+	}
+
+.btn-sm {
+	padding: 5px 12px;
+	font-size: .82rem;
+}
+
+.btn-edit {
+	background: #f59e0b;
+	color: #fff;
+}
+
+	.btn-edit:hover {
+		background: #d97706;
+	}
+
+.btn-delete {
+	background: #ef4444;
+	color: #fff;
+}
+
+	.btn-delete:hover {
+		background: #dc2626;
+	}
+
+.btn-logout {
+	background: #fff;
+	color: #374151;
+	border: 1.5px solid #d1d5db;
+}
+
+	.btn-logout:hover {
+		background: #f3f4f6;
+	}
+
+.msg {
+	display: block;
+	padding: 10px 14px;
+	border-radius: 7px;
+	margin-bottom: 16px;
+	font-size: .92rem;
+}
+
+.msg-success {
+	background: #d1fae5;
+	color: #065f46;
+	border: 1px solid #6ee7b7;
+}
+
+.msg-error {
+	background: #fee2e2;
+	color: #7f1d1d;
+	border: 1px solid #fca5a5;
+}
+
+.val-msg {
+	color: #dc2626;
+	font-size: .82rem;
+	display: block;
+	margin-top: 3px;
+}
+
+
+.site-header {
+	background: #1e3a5f;
+	color: #fff;
+	padding: 0 28px;
+	height: 58px;
+	display: flex;
+	align-items: center;
+	box-shadow: 0 2px 8px rgba(0,0,0,.2);
+	position: sticky;
+	top: 0;
+	z-index: 100;
+}
+
+.header-inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+}
+
+.logo {
+	font-size: 1.15rem;
+	font-weight: 700;
+	letter-spacing: .3px;
+}
+
+.header-user {
+	font-size: .9rem;
+	color: #cbd5e1;
+}
+
+
+.main-container {
+	max-width: 1100px;
+	margin: 28px auto;
+	padding: 0 20px;
+}
+
+
+.card {
+	background: #fff;
+	border-radius: 10px;
+	box-shadow: 0 2px 10px rgba(0,0,0,.08);
+	padding: 24px;
+	margin-bottom: 24px;
+}
+
+.card-title {
+	font-size: 1.1rem;
+	font-weight: 700;
+	color: #1e3a5f;
+	margin-bottom: 18px;
+	padding-bottom: 10px;
+	border-bottom: 2px solid #e5e7eb;
+}
+
+
+.form-row {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	gap: 14px;
+}
+
+.form-actions {
+	margin-top: 16px;
+	display: flex;
+	align-items: center;
+}
+
+.grid {
+	width: 100%;
+	border-collapse: collapse;
+	font-size: .9rem;
+}
+
+	.grid th {
+		background: #1e3a5f;
+		color: #fff;
+		padding: 10px 12px;
+		text-align: left;
+		font-weight: 600;
+	}
+
+	.grid td {
+		padding: 9px 12px;
+		border-bottom: 1px solid #e5e7eb;
+		vertical-align: middle;
+	}
+
+	.grid tr:last-child td {
+		border-bottom: none;
+	}
+
+	.grid tr:hover td {
+		background: #f0f4ff;
+	}
+
+@media (max-width: 680px) {
+	.form-row {
+		grid-template-columns: 1fr;
+	}
+
+	.auth-card {
+		padding: 28px 20px;
+	}
+
+	.grid th, .grid td {
+		padding: 7px 8px;
+		font-size: .82rem;
+	}
+}
