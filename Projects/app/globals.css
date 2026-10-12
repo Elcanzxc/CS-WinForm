@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #06090e;
+    --foreground: #f1f5f9;
+  }
+
+  body {
+    background-color: #06090e;
+    color: #f1f5f9;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+}
+
+/* Custom Medical Pulse Animations */
+@keyframes ecg-pulse {
+  0% { transform: scale(0.98); opacity: 0.8; }
+  50% { transform: scale(1.02); opacity: 1; }
+  100% { transform: scale(0.98); opacity: 0.8; }
+}
+
+@keyframes perimeter-alarm {
+  0% {
+    box-shadow: inset 0 0 50px rgba(239, 68, 68, 0.7), 0 0 25px rgba(220, 38, 38, 0.6);
+    border-color: rgba(239, 68, 68, 0.9);
+  }
+  50% {
+    box-shadow: inset 0 0 100px rgba(220, 38, 38, 0.9), 0 0 40px rgba(239, 68, 68, 0.8);
+    border-color: rgba(254, 202, 202, 1);
+  }
+  100% {
+    box-shadow: inset 0 0 50px rgba(239, 68, 68, 0.7), 0 0 25px rgba(220, 38, 38, 0.6);
+    border-color: rgba(239, 68, 68, 0.9);
+  }
+}
+
+@keyframes blue-alarm {
+  0% {
+    box-shadow: inset 0 0 50px rgba(59, 130, 246, 0.7), 0 0 25px rgba(37, 99, 235, 0.6);
+    border-color: rgba(59, 130, 246, 0.9);
+  }
+  50% {
+    box-shadow: inset 0 0 100px rgba(37, 99, 235, 0.9), 0 0 40px rgba(59, 130, 246, 0.8);
+    border-color: rgba(191, 219, 254, 1);
+  }
+  100% {
+    box-shadow: inset 0 0 50px rgba(59, 130, 246, 0.7), 0 0 25px rgba(37, 99, 235, 0.6);
+    border-color: rgba(59, 130, 246, 0.9);
+  }
+}
+
+.animate-perimeter-alarm {
+  animation: perimeter-alarm 1.2s infinite ease-in-out;
+}
+
+.animate-blue-alarm {
+  animation: blue-alarm 0.9s infinite ease-in-out;
+}
+
+.animate-ecg-heartbeat {
+  animation: ecg-pulse 1.8s infinite ease-in-out;
+}
+
+/* Print specific styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #printable-ticket, #printable-ticket * {
+    visibility: visible;
+  }
+  #printable-ticket {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 16px;
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+}

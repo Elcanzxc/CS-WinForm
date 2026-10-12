@@ -1,0 +1,877 @@
+plants:
+  - id: monstera_deliciosa
+    name: "Monstera deliciosa (Dəlikli monstera)"
+    family: "Araceae (Aroidlər)"
+    description: "Böyük, dəlikli dərivari yarpaqlara malik tropik epifit liana."
+    optimal_humidity_min: 60.0
+    optimal_humidity_max: 85.0
+    optimal_temp_min: 18.0
+    optimal_temp_max: 28.0
+    optimal_dli_min: 8.0
+    optimal_dli_max: 16.0
+    optimal_ph_min: 5.5
+    optimal_ph_max: 6.8
+    vulnerabilities:
+      - "Ağır və sıx torpaqda anaerob kök çürüməsinə yüksək meyllilik"
+      - "Havanın rütubəti 45%-dən aşağı düşdükdə kənar nekrozu (quruması)"
+
+  - id: ficus_benjamina
+    name: "Ficus benjamina (Benyamin fikusu)"
+    family: "Moraceae (Tutkimilər)"
+    description: "Xırda sıx yarpaqlı və stress faktorlarına qarşı kəskin reaksiya verən həmişəyaşıl ağacvari bitki."
+    optimal_humidity_min: 50.0
+    optimal_humidity_max: 75.0
+    optimal_temp_min: 17.0
+    optimal_temp_max: 27.0
+    optimal_dli_min: 12.0
+    optimal_dli_max: 22.0
+    optimal_ph_min: 6.0
+    optimal_ph_max: 7.0
+    vulnerabilities:
+      - "Kəskin temperatur dəyişmələrində və soyuq cərəyanda (skvoznyak) qəfil yarpaq tökmə şoku"
+      - "Quru havada hörümçək gənəsinə qarşı yüksək həssaslıq"
+
+  - id: sansevieria_trifasciata
+    name: "Sansevieria trifasciata (Qayınana dili / Sanseviyeriya)"
+    family: "Asparagaceae (Qulançarkimilər)"
+    description: "Sərt xəncərvarı yarpaqlara və CAM-fotosintez tipinə malik kserofit sukkulent."
+    optimal_humidity_min: 30.0
+    optimal_humidity_max: 55.0
+    optimal_temp_min: 15.0
+    optimal_temp_max: 30.0
+    optimal_dli_min: 6.0
+    optimal_dli_max: 20.0
+    optimal_ph_min: 6.0
+    optimal_ph_max: 7.5
+    vulnerabilities:
+      - "Artıq suvarılmaya qarşı çox aşağı dözümlülük; kök yumrusunun sürətlə çürüməsi"
+
+  - id: spathiphyllum_wallisii
+    name: "Spathiphyllum wallisii (Qadın xoşbəxtliyi / Spatifillum)"
+    family: "Araceae (Aroidlər)"
+    description: "Parlaq tünd yaşıl yarpaqlara və ağ çiçək örtüyünə malik kölgəyədavamlı ot bitkisi."
+    optimal_humidity_min: 65.0
+    optimal_humidity_max: 90.0
+    optimal_temp_min: 18.0
+    optimal_temp_max: 26.0
+    optimal_dli_min: 6.0
+    optimal_dli_max: 14.0
+    optimal_ph_min: 5.0
+    optimal_ph_max: 6.5
+    vulnerabilities:
+      - "Nəmlik çatışmadıqda turgorun (elastikliyin) dərhal itirilməsi və solma"
+      - "Sərt və minerallı su ilə suvarmada yarpaq uclarının kimyəvi yanığı"
+
+  - id: phalaenopsis
+    name: "Phalaenopsis (Orxideya Falenopsis)"
+    family: "Orchidaceae (Səhləbkimilər)"
+    description: "Velamen örtüklü hava köklərinə və qalın ətli yarpaqlara malik monopodial epifit."
+    optimal_humidity_min: 55.0
+    optimal_humidity_max: 80.0
+    optimal_temp_min: 18.0
+    optimal_temp_max: 28.0
+    optimal_dli_min: 8.0
+    optimal_dli_max: 15.0
+    optimal_ph_min: 5.5
+    optimal_ph_max: 6.5
+    vulnerabilities:
+      - "Yarpaq qoltuğunda su yığıldıqda böyümə nöqtəsinin çürüməsi"
+      - "Qabıq substratı xarab olduqda köklərin hava çatışmazlığından boğulması"
+
+symptoms:
+  - id: leaf_lower_yellowing
+    name: "Aşağı (yaşlı) yarpaqların saralması"
+    organ: leaves
+    description: "Aşağı vegetativ yarusda ümumiləşmiş xloroz."
+    question_text: "Əsasən aşağı (yaşlı) yarpaqlarda ümumi saralma müşahidə olunurmu?"
+    why_explanation: "Mobil element çatışmazlıqlarını (N, Mg) və kök çürüməsi zamanı yaranan damar blokadasını dəmir çatışmazlığından fərqləndirir."
+
+  - id: leaf_spots_brown_moist
+    name: "Sarı haşiyəli qəhvəyi sulu / nəm ləkələr"
+    organ: leaves
+    description: "Yumşalmış və nəm toxumalı tünd nekrotik ocaqlar."
+    question_text: "Yarpaq səthində kənarları yumşaq, sulu və ya yaş olan tünd qəhvəyi ləkələr varmı?"
+    why_explanation: "Kök sisteminin anaerob sepsisi və ya bakterial yoluxmanın (Pseudomonas/Xanthomonas) əsas diaqnostik göstəricisidir."
+
+  - id: substrate_constantly_wet
+    name: "Substratın xroniki olaraq həddindən artıq nəm qalması (su durğunluğu)"
+    organ: substrate
+    description: "Substrat suvarmadan sonra 7-10 gündən çox 3-4 sm dərində qurumur, sıx və palçıqlıdır."
+    question_text: "Torpaq suvarmadan sonra 7 gündən çox müddətdə soyuq və nəm qalır, üst təbəqəsi qurumuramı?"
+    why_explanation: "Kök tüklərinin hipoksiya (oksigen aclığı) və anaerob məhvinin fiziki amilini müəyyən edir."
+
+  - id: substrate_smell_sour
+    name: "Torpaqdan / qabdan gələn çürüntü və ya kif qoxusu"
+    organ: substrate
+    description: "Kök zonasında anaerob parçalanmanın orqanoleptik əlaməti."
+    question_text: "Dibçəyin altından və ya torpaqdan xoşagəlməz, çürüntü və ya kif iyi gəlirmi?"
+    why_explanation: "Oksigensiz mühitdə bakterial kök çürüməsinin birbaşa patoqnomonik göstəricisidir."
+
+  - id: roots_brown_mushy
+    name: "Qəhvəyi, selikli və asan qopan köklər"
+    organ: roots
+    description: "Kök sisteminin müayinəsi zamanı ötürücü toxumaların dağılması."
+    question_text: "Köklərə baxdıqda onların qəhvəyi, yumşalmış, selikli və asan qopduğunu görürsünüzmü?"
+    why_explanation: "Geri dönməz kök nekrozunun (Root Rot) anatomik təsdiqidir."
+
+  - id: loss_of_turgor_wilted
+    name: "Turgorun itirilməsi (yarpaqların pambıq kimi sallanması və solması)"
+    organ: leaves
+    description: "Hüceyrədaxili təzyiqin düşməsi, yarpaqların elastikliyini itirərək sallanması."
+    question_text: "Yarpaqlar elastikliyini itirib, soluxmuş və aşağı sallanmış vəziyyətdədirmi?"
+    why_explanation: "Su nəqlinin pozulduğunu göstərir: ya suvarma çatışmır, ya da sovurucu köklər çürüyüb məhv olub."
+
+  - id: substrate_dry_cracked
+    name: "Torpağın tam quruyub çatlaması və qabın divarlarından ayrılması"
+    organ: substrate
+    description: "Substratın nəmliyinin daimi solma nöqtəsindən aşağı düşməsi, toz halına gəlməsi."
+    question_text: "Dibçəkdəki torpaq tamamilə qurudur, yüngülləşib və dibçəyin divarlarından aralanıbmı?"
+    why_explanation: "Fizioloji quraqlığı kök çürüməsi nəticəsində yaranan yalançı solmadan ayırır."
+
+  - id: leaves_crispy_curled
+    name: "Yarpaq kənarlarının quru, qıvrılmış və kövrək olması"
+    organ: leaves
+    description: "Yarpaq toxumasının xırçıldayan perqament vəziyyətinə qədər susuzlaşması."
+    question_text: "Yarpaqların kənarları nazilib bükülüb və toxunduqda ovxalanıb sınır?"
+    why_explanation: "Kəskin su çatışmazlığı və həddindən artıq quru hava üçün xarakterikdir."
+
+  - id: internodes_elongated_pale
+    name: "Zoğların həddindən artıq uzanması və yarpaqların solğun xırdalanması"
+    organ: stem
+    description: "İşıq çatışmazlığı nəticəsində zoğların etiolyasiyası və xloroplastların deqradasiyası."
+    question_text: "Budaqlar anormal dərəcədə uzanıb, buğumaraları genişlənib və yeni yarpaqlar xırda, solğundurmu?"
+    why_explanation: "İşıq aclığının (DLI normasından aşağı olmasının) spesifik əlamətidir."
+
+  - id: leaf_scorch_white_tan
+    name: "İşığa baxan yarpaqlarda quru, ağarmış və ya saman rəngli ləkələr"
+    organ: leaves
+    description: "Düz düşən sərt günəş şüalarının (ultrabənövşəyi) fotosintez piqmentlərini məhv etməsi."
+    question_text: "Pəncərəyə baxan yarpaqların üstündə quru, ağarmış və ya yanmış ləkələr əmələ gəlibmi?"
+    why_explanation: "Fotooksidləşdirici stressi (günəş yanığını) müəyyən edir."
+
+  - id: webbing_microscopic
+    name: "Yarpaqların altında və buğumlarda nazik hörümçək toru"
+    organ: leaves
+    description: "Tetranychidae koloniyalarının ipək hörümçək telləri."
+    question_text: "Yarpaqların arxa tərəfində və ya saplaqların arasında incə hörümçək toru görünürmü?"
+    why_explanation: "Hörümçək gənəsi zədələnməsinin patoqnomonik diaqnostik əlamətidir."
+
+  - id: leaves_punctured_stippling
+    name: "Yarpaq səthində çoxsaylı xırda ağ/sarı nöqtələr (deşilmə izləri)"
+    organ: leaves
+    description: "Gənələrin hüceyrə şirəsini sorması nəticəsində yaranan nöqtəvi xlorotik nekroz."
+    question_text: "Yarpağın üst səthi iynə ucu boyda xırda açıq rəngli nöqtələrlə örtülübmü?"
+    why_explanation: "Sorucu zərərvericilərin hüceyrələri deşərək qidalandığını təsdiqləyir."
+
+  - id: cottony_wax_deposits
+    name: "Yarpaq qoltuqlarında pambığabənzər ağ yumşaq kütlələr"
+    organ: leaves
+    description: "Unlu yastıcanın (Pseudococcidae) mum ifrazatı və yumurta kisələri."
+    question_text: "Yarpaq qoltuqlarında və ya gövdədə pambıq parçasına bənzəyən ağ kütlələr müşahidə olunurmu?"
+    why_explanation: "Unlu yastıca zərərvericisinin mövcudluğunun birmənalı göstəricisidir."
+
+  - id: silvery_sheen_black_dots
+    name: "Gümüşü metal parıltısı və xırda qara nöqtələr"
+    organ: leaves
+    description: "Tripslərin toxumanı yeməsindən sonra yaranan hava boşluqları və nəcis damcıları."
+    question_text: "Yarpağın səthində gümüşü metalik parıltı və xırda qara ifrazat nöqtələri varmı?"
+    why_explanation: "Tripslərin (Thysanoptera) fəaliyyətinin klassik kliniki triadasıdır."
+
+  - id: brown_waxy_scales
+    name: "Gövdə və damarlarda qonur, bərk mum lövhəcikləri (qabıqlar)"
+    organ: stem
+    description: "Coccidae / Diaspididae dişilərinin dırnaqla çətin qopan qoruyucu çanaqları."
+    question_text: "Gövdələrdə və damarlarda dırnaqla çətinliklə qopan bərk qonur pulcuqlar yapışıbmı?"
+    why_explanation: "Çanaqlı və ya yalançı çanaqlı yastıcanın dəqiq diaqnostik meyarıdır."
+
+  - id: sticky_honeydew
+    name: "Yarpaqlarda yapışqanlı parlaq təbəqə (şirə / bal şehi)"
+    organ: leaves
+    description: "Sorucu həşəratların ifraz etdiyi şəkərli maye."
+    question_text: "Yarpaqların səthi şəkər şərbəti kimi yapışqanlıdır və parıldayırmı?"
+    why_explanation: "Yastıca və ya mənənələrin aktiv fəaliyyət göstərdiyini göstərir."
+
+  - id: young_leaves_interveinal_chlorosis
+    name: "Yalnız gənc üst yarpaqlarda damarlararası xloroz"
+    organ: leaves
+    description: "Damarların tünd yaşıl qalması fonunda damararası toxumaların saralması."
+    question_text: "Yeni çıxan üst yarpaqlar açıq sarı rəngdə böyüyür, damarları isə kəskin yaşıl qalırmı?"
+    why_explanation: "Hərəkətsiz dəmir (Fe) ionunun çatışmazlığı və ya torpağın qələvi pH mühiti üçün patoqnomonikdir."
+
+  - id: lower_leaves_uniform_yellow
+    name: "Aşağı yarpaqların damarları ilə birlikdə bərabər şəkildə saralması"
+    organ: leaves
+    description: "Bitkidə azotun yaşlı hissələrdən böyümə nöqtəsinə daşınması (reutilizasiyası)."
+    question_text: "Aşağı yarpaqlar ləkəsiz, damarları ilə birlikdə bütövlükdə açıq sarı rəng alıbmı?"
+    why_explanation: "Proqressivləşən azot aclığını göstərir."
+
+  - id: white_crust_on_soil
+    name: "Torpaq səthində ağ duz qatı / əhəng örtüyü"
+    organ: substrate
+    description: "Həddindən artıq gübrələmə və ya sərt su nəticəsində həll olmayan duzların kristallaşması."
+    question_text: "Torpağın səthində və ya dibçəyin kənarında bərk ağ duz təbəqəsi əmələ gəlibmi?"
+    why_explanation: "Kök hüceyrələrində osmotik stress və yanıq təhlükəsini sübut edir."
+
+  - id: leaf_tips_brown_dry
+    name: "Yarpaq uclarının quru və xırıldayan tünd qonur rəng alması"
+    organ: leaves
+    description: "Havanın quru olması səbəbindən ucluqların transpirasiya stressi nekrozu."
+    question_text: "Yarpaqların ucları xırıldayan quru qonur rəng alıb, lakin ləkə yaş və selikli deyil?"
+    why_explanation: "Havanın quruluğunu (aşağı VPD) nəm çürümə prosesindən fərqləndirir."
+
+  - id: sudden_leaf_drop_green
+    name: "Yarpaqların solmadan qəfil və kütləvi şəkildə yaşıl tökülməsi"
+    organ: whole_plant
+    description: "Temperatur şokunda saplağın ayrılma qatının fermentativ parçalanması (absissiya)."
+    question_text: "Bitki 1-3 gün ərzində solmadan, yaşıl vəziyyətdə çoxlu yarpağını tökdümü?"
+    why_explanation: "Temperatur şoku və ya soyuq havalandırma cərəyanının (skvoznyak) xarakterik reaksiyasıdır."
+
+  - id: blisters_translucent_leaf
+    name: "Yarpağın arxasında bərk sulu qabarcıqlar / ziyillər (Edema)"
+    organ: leaves
+    description: "Transpirasiya zəif olduqda hüceyrələrin artıq sudan partlayaraq mantarlaşması."
+    question_text: "Yarpaqların alt tərəfində kiçik şəffaf qabarcıqlar, ziyilvari bərk törəmələr varmı?"
+    why_explanation: "Fizioloji su ödəminin (Edema) anatomik əlamətidir."
+
+pathologies:
+  - id: root_rot
+    name: "Kök çürüməsi (Anaerob kök sepsisi)"
+    latin_name: "Anaerobic root necrobiosis / Pythium, Phytophthora spp."
+    category: pathogen_fungal
+    criticality: critical
+    pathogenesis_mechanism: "Xroniki su durğunluğu torpaqda oksigen çatışmazlığına (hipoksiya) səbəb olur. Kök hüceyrələri məhv olur və anaerob göbələk/bakteriyalar tərəfindən çürüdülür. Su nəqli kəsilir, yarpaqlarda nəm nekroz ləkələri yaranır."
+    therapeutic_protocol:
+      emergency_measures:
+        - "Dərhal bitkini dibçəkdən çıxarın və nəm torpağı köklərdən təmizləyin."
+        - "Steril bıçaqla bütün yumşalmış, qonur çürük kökləri sağlam ağ toxumaya qədər kəsin."
+        - "Kök sistemini 20 dəqiqə funqisid məhlulunda (Previkur Enerji və ya Maksim) saxlayın."
+      microclimate_adjustments:
+        - "Bitkini 30-40% perlit/seramis qatılmış çox yüngül və hava keçirən torpağa köçürün."
+        - "Suvarmanı azaldın; torpağın üst 30%-i tam qurumayana qədər su verməyin."
+        - "Kökəmələgəlməni stimullaşdırmaq üçün dibçək zonasında 22-24°C istilik təmin edin."
+      pharmacotherapy:
+        - "Sistem funqisidi: Propamokarb hidroxlorid (Previkur Enerji) 1.5 ml/l kök altına."
+        - "7 gündən sonra kök stimulyatoru: Kornevin və ya Radifarm tətbiq edin."
+      prognosis: "Canlı kök kütləsinin >30%-i qaldıqda yaxşıdır; kök boğazı çürüdükdə şans azdır."
+
+  - id: acute_water_deficit
+    name: "Kəskin su çatışmazlığı (Plazmoliz / Fizioloji quraqlıq)"
+    latin_name: "Desiccatio acuta"
+    category: physiological
+    criticality: high
+    pathogenesis_mechanism: "Torpağın su potensialı köklərin sovurma gücündən aşağı düşür. Hüceyrələrdə turgor təzyiqi itir, plazmoliz baş verir, yarpaqlar sallanır və kök ucları quruyur."
+    therapeutic_protocol:
+      emergency_measures:
+        - "Dibçəyi 25-40 dəqiqə ilıq su (24°C) olan ləyənə qoyaraq altdan tam nəmləndirin."
+        - "Yarpaqlara xırda su çiləyin və bitkini 12 saatlıq şəffaf sellofan örtük altına qoyun."
+      microclimate_adjustments:
+        - "Bitkini düz düşən günəş şüalarından və radiatorlardan dərhal uzaqlaşdırın."
+        - "Drenajdan su çıxana qədər nizamlı suvarma cədvəli qurun."
+      pharmacotherapy:
+        - "Stress əleyhinə adaptogen: Epin-Ekstra (1 litr suya 0.25 ml) yarpaqlara püskürdün."
+      prognosis: "Əladır; nəmləndirmədən 4-8 saat sonra yarpaqların turgoru tam bərpa olunur."
+
+  - id: etiolation
+    name: "Etiolyasiya (İşıq aclığı / Fotosistemlərin deqradasiyası)"
+    latin_name: "Etiolatio vegetativa"
+    category: environmental
+    criticality: medium
+    pathogenesis_mechanism: "Fotosintetik aktiv radiasiyanın (DLI < 5 mol/m2/gün) çatışmazlığı xlorofil sintezini bloklayır. Oksinlər gövdədə toplanaraq zəif və nazik toxumaların anormal uzanmasına səbəb olur."
+    therapeutic_protocol:
+      emergency_measures:
+        - "Yeni yan tumurcuqların inkişafı üçün həddindən artıq uzanmış və eybəcər zoğları budayın."
+      microclimate_adjustments:
+        - "Bitkini pəncərəyə yaxınlaşdırın və ya fitolampa (PPFD 150-250 mkmol/m2/s) quraşdırın."
+        - "Gündə 12-14 saatlıq süni işıqlandırma rejimi qurun."
+      pharmacotherapy:
+        - "Xloroplastları bərpa etmək üçün tərkibində maqnezium və amin turşuları olan mikroelement kompleksi verin."
+      prognosis: "Yaxşıdır; işıq normallaşdıqdan sonra yeni çıxan zoğlar tam sağlam formalaşır."
+
+  - id: photodestruction
+    name: "Fotodestruksiya / Günəş yanığı"
+    latin_name: "Photo-destructio solaris"
+    category: environmental
+    criticality: medium
+    pathogenesis_mechanism: "Həddindən artıq intensiv günəş radiasiyası hüceyrələrdə reaktiv oksigen növləri yaradaraq tilakoid membranlarını və xlorofili yandırır, quru ağarmış ləkələr əmələ gətirir."
+    therapeutic_protocol:
+      emergency_measures:
+        - "Bitkini dərhal günəşin düz şüalarından kölgəyə çəkin və ya tül pərdə ilə qoruyun."
+        - "Yarpaqda yaşıl hissə qalıbsa, onu tam kəsməyin (fotosintezi davam etdirir)."
+      microclimate_adjustments:
+        - "Saat 11:00 - 16:00 arası düz düşən qızmar günəş şüalarını istisna edin."
+      pharmacotherapy:
+        - "Oksidləşdirici stressi neytrallaşdırmaq üçün Zirkon preparatı (1 litr suya 4 damcı) ilə çiləyin."
+      prognosis: "Sabitdir; yanmış yerlər bərpa olunmur, lakin proses dərhal dayanır."
+
+  - id: spider_mite
+    name: "Hörümçək gənəsi zədələnməsi"
+    latin_name: "Tetranychus urticae / Tetranychidae"
+    category: pest
+    criticality: high
+    pathogenesis_mechanism: "Gənələr epidermis hüceyrələrini deşərək şirəni sorur. Yarpaqda xırda sarı nöqtələr əmələ gəlir, arxa tərəfi torla örtülür və transpirasiya kəskin artır."
+    therapeutic_protocol:
+      emergency_measures:
+        - "Bitkini dərhal digər bitkilərdən təcrid edərək karantinə alın."
+        - "Dibçək torpağını sellofanla bağlayıb yarpaqları ilıq duş (35°C) altında yuyun."
+      microclimate_adjustments:
+        - "Havanın rütubətini 65%-dən yuxarı qaldırın (gənələr quru havada sürətlə çoxalır)."
+      pharmacotherapy:
+        - "Akarisid preparatları: Sanmayt / Nissoran və ya Fitoverm ilə 5 gün intervalla 3 dəfə çiləyin."
+      prognosis: "Vaxtında aparılan akarisid müalicəsi ilə tam sağalır."
+
+  - id: mealybug
+    name: "Unlu yastıca zədələnməsi"
+    latin_name: "Planococcus citri / Pseudococcidae"
+    category: pest
+    criticality: high
+    pathogenesis_mechanism: "Zərərvericilər yarpaq qoltuqlarında və köklərdə toplanaraq bitki şirəsini sorur, ağ mum örtüyü və toksik fermentlər ifraz edərək inkişafı dayandırır."
+    therapeutic_protocol:
+      emergency_measures:
+        - "Pambıq kütlələrini 70%-li spirtə və ya sabunlu suya batırılmış pambıq çöplə təmizləyin."
+        - "Bitkini təcrid edin."
+      microclimate_adjustments:
+        - "Hər 3 gündən bir yarpaq qoltuqlarını diqqətlə yoxlayın."
+      pharmacotherapy:
+        - "Sistem insektisidi: Tiametoksam (Aktara 1 q/l) ilə torpağı sulayın və Mospiran çiləyin."
+      prognosis: "Aktara ilə torpaq sulandıqda nəticə çox yaxşıdır."
+
+  - id: thrips
+    name: "Trips zədələnməsi"
+    latin_name: "Frankliniella occidentalis / Thysanoptera"
+    category: pest
+    criticality: high
+    pathogenesis_mechanism: "Sürfələr və yetkin həşəratlar yarpaq daxilində yollar açaraq hüceyrələri hava ilə doldurur (gümüşü parıltı) və qara nəcis ləkələri qoyur."
+    therapeutic_protocol:
+      emergency_measures:
+        - "Bitkini təcrid edin, çiçəkləri və qönçələri kəsin (əsas sürfə mənbəyidir)."
+        - "Mavi və ya sarı yapışqanlı tələlər asın."
+      microclimate_adjustments:
+        - "Yarpaqları mütəmadi olaraq nəm salfetlə silin."
+      pharmacotherapy:
+        - "Kompleks insektisid: Spintor / Batrayder / Konfidor ilə 6 gün intervalla 3 dəfə işləyin."
+      prognosis: "Torpaqda olan pup mərhələsi məhv edildikdə tam sağalır."
+
+  - id: scale_insect
+    name: "Çanaqlı yastıca / Yalançı çanaqlı yastıca"
+    latin_name: "Coccus hesperidum / Diaspididae"
+    category: pest
+    criticality: high
+    pathogenesis_mechanism: "Dişilər xitin-mum çanaqla örtülüdür və kontakt zəhərlərdən qorunur. Gövdənin damarlarından şirə sorur və yapışqanlı şirə ifraz edirlər."
+    therapeutic_protocol:
+      emergency_measures:
+        - "Qonur çanaqları yaşıl sabun məhluluna batırılmış sərt diş fırçası ilə mexaniki təmizləyin."
+      microclimate_adjustments:
+        - "Pəncərə altlığını və çərçivəni spirtli məhlulla yuyun."
+      pharmacotherapy:
+        - "Yalnız sistem insektisidi: Aktara (5 litr suya 4 qram) ilə torpağı 10 gün intervalla 2 dəfə sulayın."
+      prognosis: "Sistem insektisidi bitki şirəsini zəhərli etdiyi üçün nəticə əladır."
+
+  - id: iron_chlorosis
+    name: "Dəmir xlorozi (Fe çatışmazlığı)"
+    latin_name: "Chlorosis ferrica"
+    category: nutritional
+    criticality: medium
+    pathogenesis_mechanism: "pH > 7.0 olduqda və ya artıq fosfat fonunda dəmir ionları həllolunmaz formaya keçir. Dəmir yaşlı yarpaqlardan daşına bilmədiyi üçün gənc yarpaqlarda xlorofil sintezi dayanır."
+    therapeutic_protocol:
+      emergency_measures:
+        - "Sürətli sovrulma üçün yarpaqlara dəmir xelatı məhlulu çiləyin."
+      microclimate_adjustments:
+        - "Suvarma suyunun pH-nı yoxlayın; suyu limon turşusu (5 litrə 0.5 qram) ilə pH 5.8-6.2 səviyyəsinə qədər turşulaşdırın."
+        - "Yumşaq, süzülmüş su istifadə edin."
+      pharmacotherapy:
+        - "Dəmir xelatı (Fe-EDDHA və ya 'Ferrovit' 1.5 ml/l) ilə ayda 2 dəfə yarpaqdan qidalandırın."
+      prognosis: "Əladır; 10-14 gün ərzində yeni yarpaqlar tünd yaşıl rəngini bərpa edir."
+
+  - id: nitrogen_deficiency
+    name: "Azot çatışmazlığı (Aclıq)"
+    latin_name: "Deficientia nitrogenii"
+    category: nutritional
+    criticality: medium
+    pathogenesis_mechanism: "Substratda azot ehtiyatı tükəndikdə zülallar və xlorofil parçalanaraq aşağı yarpaqlardan böyümə nöqtəsinə daşınır, nəticədə aşağı yarpaqlar tam saralır."
+    therapeutic_protocol:
+      emergency_measures:
+        - "Yüksək azot tərkibli balanslaşdırılmış kompleks mineral gübrə verin (NPK 20-10-10)."
+      microclimate_adjustments:
+        - "Torpağın üst 3-4 sm qatını biohumus və ya təzə torpaqla yeniləyin."
+      pharmacotherapy:
+        - "Karbamid (sidik cövhəri 1 q/l) və ya amin turşusu kompleksi ilə yarpaqdan qidalandırma aparın."
+      prognosis: "Tam stabilləşir; saralmış köhnə yarpaqlar yaşıllaşmasa da, yeni yarpaqlar güclü böyüyür."
+
+  - id: osmotic_root_burn
+    name: "Kökün osmotik yanığı (Duz toksikozu)"
+    latin_name: "Toxicosis mineralis / Combustio osmotica"
+    category: physiological
+    criticality: high
+    pathogenesis_mechanism: "Torpaqda duz konsentrasiyası (EC > 3.0 mS/cm) kök hüceyrələrinin osmotik təzyiqini üstələyir. Su kökdən torpağa doğru axır, kök tükləri kimyəvi yanıq alaraq məhv olur."
+    therapeutic_protocol:
+      emergency_measures:
+        - "Substratı dibçək həcmindən 3 dəfə çox distillə edilmiş və ya yumşaq ilıq su ilə yuyun (leaching)."
+        - "Ağ duz təbəqəsi olan üst torpaq qatını çıxarın."
+      microclimate_adjustments:
+        - "Ən azı 4 həftə ərzində bütün növ gübrələməni tam dayandırın."
+      pharmacotherapy:
+        - "Zəhərli ionları bağlamaq üçün zəif qatılıqlı kalium humatı məhlulu ilə sulayın."
+      prognosis: "Duz vaxtında yuyulduqda qənaətbəxşdir."
+
+  - id: bacterial_spot
+    name: "Bakterial ləkələnmə"
+    latin_name: "Xanthomonas / Pseudomonas spot"
+    category: pathogen_bacterial
+    criticality: critical
+    pathogenesis_mechanism: "Bakteriyalar ağızcıqlardan daxil olaraq toxumaları parçalayan pektolitik fermentlər ifraz edir, sulu eksudat və sürətlə böyüyən nəm nekroz ləkələri yaradır."
+    therapeutic_protocol:
+      emergency_measures:
+        - "Bitkini dərhal təcrid edin, yarpaqlara su çiləməyi tam dayandırın (su bakteriyaları yayır!)."
+        - "Yoluxmuş yarpaqları sağlam toxumadan 1 sm tutaraq steril alətlə kəsin, kəsik yerinə kömür tozu vurun."
+      microclimate_adjustments:
+        - "Havanın rütubətini 50%-ə endirin və otaqda daimi təmiz hava dövranı yaradın."
+      pharmacotherapy:
+        - "Bioloji bakterisid: Fitolavin (fitobacteriomisin) 2 ml/l həm kök altına, həm də yarpaqlara."
+        - "Yayılma güclü olduqda mis tərkibli preparatlar (HOM və ya Abiq-Pik) tətbiq edin."
+      prognosis: "Ehtiyatlı; bakterioz aqressivdir, uğur ocaqların nə dərəcədə tez kəsilməsindən asılıdır."
+
+  - id: low_vpd_dry_air
+    name: "Quru hava / Yüksək transpirasiya stressi (Aşağı VPD)"
+    latin_name: "Stress desiccativus aëris"
+    category: environmental
+    criticality: low
+    pathogenesis_mechanism: "Havanın rütubəti 40%-dən aşağı olduqda yarpaqlardan su buxarlanması köklərin suyu çatdırmasından sürətli gedir, ən uc hüceyrələr susuzluqdan quruyur."
+    therapeutic_protocol:
+      emergency_measures:
+        - "Bitkinin yaxınlığında (1-1.5 metr məsafədə) ultrasəs nəmləndiricisi quraşdırın."
+      microclimate_adjustments:
+        - "Nisbi rütubəti 60-75% səviyyəsində saxlayın."
+        - "Dibçəyi nəm keramzit olan geniş altlığın üstünə qoyun (dibçəyin dibi suya dəyməməlidir)."
+      pharmacotherapy:
+        - "Yarpaq səthinə qoruyucu mum spreyi və ya antitranspirant tətbiq edin."
+      prognosis: "Əladır; ucların quruması dərhal dayanır."
+
+  - id: temperature_shock
+    name: "Temperatur şoku / Soyuq cərəyan (Skvoznyak)"
+    latin_name: "Trauma thermica / Defoliatio reactiva"
+    category: environmental
+    criticality: high
+    pathogenesis_mechanism: "Kəskin temperatur enişi (>7°C) və ya soyuq hava axını endogen etilen ifrazını artırır, nəticədə yarpaq saplağının dibi fermentativ parçalanaraq yaşıl yarpaqları tökür."
+    therapeutic_protocol:
+      emergency_measures:
+        - "Bitkini dərhal soyuq hava xəttindən və ya soyuq pəncərə önündən götürün."
+        - "Soyuq su ilə suvarmanı qəti qadağan edin."
+      microclimate_adjustments:
+        - "Kəskin dalğalanma olmadan sabit 20-23°C otaq temperaturu təmin edin."
+      pharmacotherapy:
+        - "Etilen ifrazını bloklamaq üçün Epin-Ekstra adaptogeni ilə yarpaqları işləyin."
+      prognosis: "Yaxşıdır; bitkinin tacı 1-2 ay ərzində bərpa olunur."
+
+  - id: edema
+    name: "Ödəm / Su şişkinliyi (Edema)"
+    latin_name: "Oedema intumescentia"
+    category: physiological
+    criticality: low
+    pathogenesis_mechanism: "Köklər isti nəm torpaqdan intensiv su qəbul edir, lakin havanın rütubətli və ya sərin olması səbəbindən yarpaqlardan transpirasiya getmir. Hüceyrələr daxili təzyiqdən partlayır və qabarır."
+    therapeutic_protocol:
+      emergency_measures:
+        - "Dibçək torpağının ən azı 50%-i quruyana qədər suvarmanı müvəqqəti dayandırın."
+      microclimate_adjustments:
+        - "İşıqlandırmanı artırın və otağın havalandırmasını yaxşılaşdırın."
+        - "Torpağın temperaturu ilə havanın temperaturunu bərabərləşdirin (hava torpaqdan soyuq olmamalıdır)."
+      pharmacotherapy:
+        - "Kimyəvi dərman tələb olunmur; aqrotexniki qaydaya salındıqda problem tam aradan qalxır."
+      prognosis: "Əladır; köhnə qabarcıqlar itməsə də, yeni çıxan yarpaqlar tər-təmiz olur."
+
+rules:
+  # --------------------------------------------------------------------------
+  # 1. ROOT ROT RULES
+  # --------------------------------------------------------------------------
+  - id: RULE_RR_01
+    name: "Kök çürüməsi: klassik triada (nəmlik + nəm ləkələr + saralma)"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: substrate_constantly_wet
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+      - symptom_id: leaf_spots_brown_moist
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+      - symptom_id: leaf_lower_yellowing
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: root_rot
+    rule_cf: 0.85
+    priority: 85
+    explanation_how: "Xroniki su durğunluğu, nəm ocaqlar və aşağıdan yuxarı saralma kök sisteminin anaerob sepsisindən xəbər verir."
+
+  - id: RULE_RR_02
+    name: "Kök çürüməsi: Monstera deliciosa spesifikliyi"
+    target_species: ["monstera_deliciosa"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: substrate_constantly_wet
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+      - symptom_id: leaf_spots_brown_moist
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: root_rot
+    rule_cf: 0.75
+    priority: 80
+    explanation_how: "Monstera deliciosa kök hipoksiyasına qarşı çox həssasdır; nəm torpaqda yaranan nəm ləkələr köklərin çürüməsini göstərir."
+
+  - id: RULE_RR_03
+    name: "Kök çürüməsi: patoqnomonik kök sepsisi və qoxu"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: roots_brown_mushy
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+      - symptom_id: substrate_smell_sour
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: root_rot
+    rule_cf: 0.95
+    priority: 95
+    explanation_how: "Çürümüş yumşaq köklərin və torpaqdan gələn çürüntü qoxusunun birbaşa aşkar olunması kök çürüməsini mütləq təsdiqləyir."
+
+  - id: RULE_RR_04_REFUTE
+    name: "Quru torpaqda kök çürüməsinin təkzib olunması"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: substrate_dry_cracked
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: root_rot
+    rule_cf: -0.80
+    priority: 90
+    explanation_how: "Tamamilə quru və çatlamış torpaq aktiv anaerob su durğunluğu prosesini istisna edir."
+
+  # --------------------------------------------------------------------------
+  # 2. ACUTE WATER DEFICIT
+  # --------------------------------------------------------------------------
+  - id: RULE_WD_01
+    name: "Kəskin su çatışmazlığı: quru torpaq + turgorun itirilməsi"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: substrate_dry_cracked
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+      - symptom_id: loss_of_turgor_wilted
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: acute_water_deficit
+    rule_cf: 0.90
+    priority: 80
+    explanation_how: "Qurumuş torpaq və yarpaqların solması su potensialının kritik solma həddindən aşağı düşdüyünü göstərir."
+
+  - id: RULE_WD_02
+    name: "Su çatışmazlığı: kövrək yarpaq kənarları"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: leaves_crispy_curled
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+      - symptom_id: substrate_dry_cracked
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: acute_water_deficit
+    rule_cf: 0.85
+    priority: 75
+    explanation_how: "Quru torpaqda yarpaq kənarlarının kövrək bükülməsi dərin hüceyrə susuzlaşmasını təsdiq edir."
+
+  - id: RULE_WD_03_REFUTE
+    name: "Daim nəm torpaqda quraqlığın təkzibi"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: substrate_constantly_wet
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: acute_water_deficit
+    rule_cf: -0.90
+    priority: 85
+    explanation_how: "Daim nəm torpaqda su qıtlığı fiziki olaraq qeyri-mümkündür (solma quraqlıqdan yox, kök çürüməsindən irəli gəlir)."
+
+  # --------------------------------------------------------------------------
+  # 3. ETIOLATION
+  # --------------------------------------------------------------------------
+  - id: RULE_ET_01
+    name: "Etiolyasiya: zoğların anormal uzanması"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: internodes_elongated_pale
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: etiolation
+    rule_cf: 0.85
+    priority: 70
+    explanation_how: "Həddindən artıq uzanmış zoğlar və solğun xırda yarpaqlar işıq inteqralının (DLI) çatışmazlığı nəticəsində yaranır."
+
+  # --------------------------------------------------------------------------
+  # 4. PHOTODESTRUCTION
+  # --------------------------------------------------------------------------
+  - id: RULE_PD_01
+    name: "Fotodestruksiya: işıqda ağarmış yanmış ləkələr"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: leaf_scorch_white_tan
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: photodestruction
+    rule_cf: 0.85
+    priority: 75
+    explanation_how: "İşığa baxan tərəflərdə quru saman rəngli ləkələr xlorofilin ultrabənövşəyi şüalarla yandığını göstərir."
+
+  # --------------------------------------------------------------------------
+  # 5. SPIDER MITE
+  # --------------------------------------------------------------------------
+  - id: RULE_SM_01
+    name: "Hörümçək gənəsi: tor + nöqtəvi deşilmələr"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: webbing_microscopic
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+      - symptom_id: leaves_punctured_stippling
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: spider_mite
+    rule_cf: 0.95
+    priority: 90
+    explanation_how: "İncə hörümçək toru və xırda açıq nöqtələrin birləşməsi Tetranychidae zədələnməsinin birbaşa təsdiqidir."
+
+  - id: RULE_SM_02
+    name: "Hörümçək gənəsi: təcrid olunmuş tor"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: webbing_microscopic
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: spider_mite
+    rule_cf: 0.75
+    priority: 70
+    explanation_how: "Buğumlarda xarakterik mikroskopik torun tapılması gənə fəaliyyətini yüksək ehtimalla təsdiq edir."
+
+  # --------------------------------------------------------------------------
+  # 6. MEALYBUG
+  # --------------------------------------------------------------------------
+  - id: RULE_MB_01
+    name: "Unlu yastıca: pambıqvari ağ kütlələr"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: cottony_wax_deposits
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: mealybug
+    rule_cf: 0.92
+    priority: 90
+    explanation_how: "Yarpaq qoltuqlarında ağ mumlu pambıqvari yığıntılar Pseudococcidae zərərvericisinin dəqiq vizit kartıdır."
+
+  # --------------------------------------------------------------------------
+  # 7. THRIPS
+  # --------------------------------------------------------------------------
+  - id: RULE_TH_01
+    name: "Tripslər: gümüşü parıltı və qara ifrazat nöqtələri"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: silvery_sheen_black_dots
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: thrips
+    rule_cf: 0.90
+    priority: 85
+    explanation_how: "Parçalanmış hüceyrələrin gümüşü parıltısı və qara nöqtələr Thysanoptera zərərvericisini təsdiqləyir."
+
+  # --------------------------------------------------------------------------
+  # 8. SCALE INSECT
+  # --------------------------------------------------------------------------
+  - id: RULE_SC_01
+    name: "Çanaqlı yastıca: bərk çanaqlar və yapışqanlı şirə"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: brown_waxy_scales
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+      - symptom_id: sticky_honeydew
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: scale_insect
+    rule_cf: 0.95
+    priority: 90
+    explanation_how: "Damarlarda bərk qonur lövhəciklər və yapışqanlı şirə Coccidae koloniyasını sübut edir."
+
+  # --------------------------------------------------------------------------
+  # 9. IRON CHLOROSIS
+  # --------------------------------------------------------------------------
+  - id: RULE_IC_01
+    name: "Dəmir xlorozi: təzə yarpaqlarda damarlararası saralma"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: young_leaves_interveinal_chlorosis
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: iron_chlorosis
+    rule_cf: 0.88
+    priority: 80
+    explanation_how: "Damarlararası saralmanın yalnız gənc yarpaqlarda olması hərəkətsiz dəmir ionunun çatışmazlığını göstərir."
+
+  # --------------------------------------------------------------------------
+  # 10. NITROGEN DEFICIENCY
+  # --------------------------------------------------------------------------
+  - id: RULE_ND_01
+    name: "Azot çatışmazlığı: aşağıdan yuxarı bərabər saralma"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: lower_leaves_uniform_yellow
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: nitrogen_deficiency
+    rule_cf: 0.80
+    priority: 70
+    explanation_how: "Yaşlı yarpaqların bərabər rəngsizləşməsi mobil azotun cavan zoğlara daşındığını göstərir."
+
+  # --------------------------------------------------------------------------
+  # 11. OSMOTIC ROOT BURN
+  # --------------------------------------------------------------------------
+  - id: RULE_OB_01
+    name: "Osmotik duz yanığı: duz qatı + kənar nekrozu"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: white_crust_on_soil
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+      - symptom_id: leaf_tips_brown_dry
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: osmotic_root_burn
+    rule_cf: 0.82
+    priority: 75
+    explanation_how: "Torpaqda ağ kristallik duz örtüyü və quru yarpaq ucları mineral toksikozu təsdiqləyir."
+
+  # --------------------------------------------------------------------------
+  # 12. BACTERIAL SPOT
+  # --------------------------------------------------------------------------
+  - id: RULE_BS_01
+    name: "Bakterial ləkələnmə: torpaqda su durğunluğu olmadan nəm ocaqlar"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: leaf_spots_brown_moist
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+      - symptom_id: substrate_constantly_wet
+        sign: absent
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: bacterial_spot
+    rule_cf: 0.70
+    priority: 70
+    explanation_how: "Torpaqda daimi nəm durğunluğu olmadan yaranan sulu qəhvəyi ləkələr birbaşa yarpaq bakteriozundan xəbər verir."
+
+  # --------------------------------------------------------------------------
+  # 13. LOW VPD / DRY AIR
+  # --------------------------------------------------------------------------
+  - id: RULE_VPD_01
+    name: "Aşağı VPD / Quru hava: quru yarpaq ucları"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: leaf_tips_brown_dry
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+      - symptom_id: leaf_spots_brown_moist
+        sign: absent
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: low_vpd_dry_air
+    rule_cf: 0.78
+    priority: 65
+    explanation_how: "Nəm çürümə əlamətləri olmadan yarpaq uclarının quruması rütubətin 45%-dən aşağı olmasının tipik nəticəsidir."
+
+  # --------------------------------------------------------------------------
+  # 14. TEMPERATURE SHOCK
+  # --------------------------------------------------------------------------
+  - id: RULE_TS_01
+    name: "Temperatur şoku: Ficus benjamina yarpaq tökülməsi"
+    target_species: ["ficus_benjamina"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: sudden_leaf_drop_green
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: temperature_shock
+    rule_cf: 0.92
+    priority: 85
+    explanation_how: "Ficus benjamina soyuq cərəyana və temperatur düşməsinə dərhal yaşıl yarpaq tökməklə reaksiya verir."
+
+  - id: RULE_TS_02
+    name: "Temperatur şoku: ümumi yaşıl kütlə tökülməsi"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: sudden_leaf_drop_green
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: temperature_shock
+    rule_cf: 0.75
+    priority: 60
+    explanation_how: "Solmamış yarpaqların qəfil tökülməsi soyuq şokunun etilen ifrazını artırması ilə baş verir."
+
+  # --------------------------------------------------------------------------
+  # 15. EDEMA
+  # --------------------------------------------------------------------------
+  - id: RULE_ED_01
+    name: "Ödəm (Edema): yarpaqlarda sulu qabarcıqlar"
+    target_species: ["all"]
+    logic_operator: AND
+    antecedents:
+      - symptom_id: blisters_translucent_leaf
+        sign: present
+        threshold: 0.2
+        weight: 1.0
+    consequent_hypothesis: edema
+    rule_cf: 0.88
+    priority: 75
+    explanation_how: "Yarpağın altında sulu qabarcıqlar su udulmasının transpirasiyadan çox olması nəticəsində hüceyrələrin partlamasından yaranır."
